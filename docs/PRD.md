@@ -89,14 +89,16 @@ Detail lengkap: `docs/API-CONTRACT.md`.
 Collection Postman: `api-test/collection.json` (25 request dengan test script). Isi kolom Status setelah dijalankan.
 | ID | Skenario | Hasil yang diharapkan | Status |
 |---|---|---|---|
-| T-01 | Login akun valid | 200 + token | [isi] |
-| T-02 | Login akun salah | 401 (body kosong: 422) | [isi] |
-| T-03 | Lihat daftar dan detail buku | 200; ID tidak ada 404 | [isi] |
-| T-04 | Pinjam buku tersedia | 201, jatuh tempo +7 hari | [isi] |
-| T-05 | Pinjam buku tidak tersedia | 409 | [isi] |
-| T-06 | Pinjam buku ke-4 | 422 | [isi] |
-| T-07 | Kembalikan buku | 200, status dikembalikan | [isi] |
-| T-08 | Cek ketersediaan setelah pinjam & kembali | false setelah pinjam, true setelah kembali | [isi] |
+| T-01 | Login akun valid | 200 + token | Lulus |
+| T-02 | Login akun salah | 401 (body kosong: 422) | Lulus |
+| T-03 | Lihat daftar dan detail buku | 200; ID tidak ada 404 | Lulus |
+| T-04 | Pinjam buku tersedia | 201, jatuh tempo +7 hari | Lulus |
+| T-05 | Pinjam buku tidak tersedia | 409 | Lulus |
+| T-06 | Pinjam buku ke-4 | 422 | Lulus |
+| T-07 | Kembalikan buku | 200, status dikembalikan | Lulus |
+| T-08 | Cek ketersediaan setelah pinjam & kembali | false setelah pinjam, true setelah kembali | Lulus |
+
+Hasil Collection Runner Postman (17 Oktober 2026): 39 test lulus, 0 gagal.
 
 Test otomatis tambahan: `php artisan test` (`backend/tests/Feature/PerpustakaanApiTest.php`).
 
